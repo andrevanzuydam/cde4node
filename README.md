@@ -21,7 +21,7 @@ Example of proposed working:
         
            var object = cde.get_object ("select * from tbltest", 10, 20);
          
-           var     
+               
         
            cde.finish( cde );
         }

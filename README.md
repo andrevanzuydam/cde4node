@@ -34,9 +34,9 @@ Example of proposed working:
     
     cde = new cde4node ({
         "dbtype": "firebird",
-        "dbpath": "askeve.co.za:/home/askeve/database/ASKEVE.FDB",
+        "dbpath": "c:\newdatabase.gdb",
         "user": "SYSDBA",
-        "password": "1235picewar3"
+        "password": "masterkey"
         },
         runQueries //run query call back
     );

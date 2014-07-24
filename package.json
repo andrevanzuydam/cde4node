@@ -1,0 +1,24 @@
+{
+	"name": "cde4node",
+	"version": "0.1.0",
+	"description": "Cross Database Engine 4 Node",
+	"keywords": [
+		"database",
+		"abstraction",
+		"firebird",
+		"sqlite3",
+		"mongodb"
+	],
+	"dependencies": {
+		"firebird": "0.0.10",
+		"sqlite3": "2.2.4",
+		"jasmine-node": "1.14.5"
+	},
+	"author": {
+		"name": "Andre van Zuydam",
+		"email": "andrevanzuydam@gmail.com"
+	},
+	"scripts": {
+		"test": "node_modules/jasmine-node/bin/jasmine-node spec"		
+	}	
+}

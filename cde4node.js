@@ -5,7 +5,7 @@
 	Version: 0.1.0
 
 	Changes:
-
+	
 */
 /*****************************************************************************************
 	Name: cde4node
@@ -21,11 +21,60 @@ function cde4node  ( params, callback ) {
 }
 
 /*****************************************************************************************
+	Name: get_dialect 
+	Purpose: Determines which dialect is being used, some dialects can be grouped into the
+	same categories, for example mysql, oracle and sqlite use similar syntax, default 
+	dialect will be ansi	  
+	Params:
+	{
+		sql: "<sqltext>"
+	}
+*****************************************************************************************/
+cde4node.prototype.get_dialect = function ( params ) {
+	var dialect = 'ansi';
+	
+	//do some tests here to see if it is something else based on params {sql:}
+
+	return dialect;
+}
+
+ 
+/*****************************************************************************************
+	Name: parse_sql
+	Purpose: Parses sql into different dialects
+	Params:
+	{
+		sql: "<sqltext>"
+	}  
+*****************************************************************************************/
+cde4node.prototype.parse_sql = function ( params ) {
+		
+}
+/*****************************************************************************************
+	Name: run_query
+	Purpose: Fetches an object from the database  
+*****************************************************************************************/
+cde4node.prototype.run_query = function ( params ) {
+	var result = []; 
+	if ( this.dbtype == "firebird" ) {
+		//	
+	}
+	  else 
+	if ( this.dbtype == "sqlite3" ) {
+		//
+	}
+	
+	return result;
+}
+/*****************************************************************************************
 	Name: fetch_object
 	Purpose: Fetches an object from the database  
 *****************************************************************************************/
 cde4node.prototype.fetch_object = function ( params ) {
 	console.log ( this.dbh );
+	
+	  
+	
 }
 
 /*****************************************************************************************
@@ -49,7 +98,15 @@ function finish ( ) {
 
 /*****************************************************************************************
 	Name: start
-	Purpose: Opens the database connection and fires the callback  
+	Purpose: Opens the database connection and fires the callback for asynchronous
+	Params:
+	{
+		dbpath: "<ipaddress>:<databasenameorpath>",
+		dbtype: "firebird,sqlite3,mysql",
+		user:   "<username>",
+		password: "<password>"
+	}
+	
 *****************************************************************************************/
 cde4node.prototype.start = start;
 function start ( params, callback ) {
